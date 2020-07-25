@@ -1,0 +1,236 @@
+<html>
+    <title>
+        Registration page
+    </title>
+    <head>
+        <h1>
+            TREK NEAR PUNE
+        </h1>
+    </head>
+    <body>
+            <a href="register.html"><button class="home">Register</button></a>
+            <a href="aboutus.html"><button class="about">About Us</button></a>
+            <a href="Home.html"><button class="register">Home</button></a>
+            <a href="records.html"><button class="Show ">Show Registrations</button></a>
+            <div class="card">
+                    <form name="contact_form" method="post" action="completed.html" autocomplete="off" onsubmit="return validateForm(event)" >
+                            <input name="email" type="text" class="form-control" placeholder="Enter Your Email" onsubmit="return validateemail(event)">
+                            <br>
+                            <input name="fname" type="text" class="form-control" placeholder="Enter Your First Name" onsubmit="return validateForm(event)">
+                            <br>
+                            <input name="lname" type="text" class="form-control" placeholder="Enter Your Last Name" onsubmit="return validateForm(event)">
+                            <br>
+                            <input name="mobile" id="mobile" type="text" class="form-control" placeholder="Enter Your Mobile Number" onkeypress="return numbersonly(event)">
+                            <br>
+                            <select name="Qualification"  class="form-control">
+                                    <option value="sinhgad">Singad Trek</option>
+                                    <option value="lohgad">Lohgad Trek</option>
+                                    
+    
+                                </select>
+                            <br>
+                            
+                            <input name="submitted" type="submit" class ="form-control submit" value="Register" onclick="return submitted(event)" /> 
+                            <br>
+                            
+                            
+                            </form>
+            </div>
+
+    </body>
+    <style>
+     h1{
+    padding: 10px;
+    text-align: left;
+    background: #044d07;
+    font-size: 40px;
+    letter-spacing: 15px;
+	line-height: 50px;
+	color: #ffffff;
+    font-family: Georgia;
+  }
+  .form-control
+{
+margin-top: 12%;
+width: 400px;
+border: none;
+outline:none;
+border-bottom: 3px solid rgb(19, 18, 18);
+color: rgb(12, 12, 12);
+margin-bottom: 20px;
+   
+}
+form .submit
+{
+background: #0b4603;
+border-bottom: none;
+width: 200px;
+color: rgb(252, 247, 247);
+font-weight: bold;
+letter-spacing: 3px;
+text-transform: uppercase;
+height: 50px;
+margin-top: 20px;
+border-radius: 30px 30px 30px 30px;
+
+}
+  h2
+{
+    
+    padding: 10px;
+    text-align: left;
+    background: #044d07;
+    font-size: 30px;
+    line-height: 110px;
+    opacity: 0.7;
+	color: #ffffff;
+    font-family: Georgia;
+  
+}
+  .info{
+      font-size: 20px;
+      line-height: 160%;
+      text-align: justify;
+      margin-left: 10%;
+      margin-right: 10%;
+      color: #000000;
+  }
+  .card {
+        background-color: #ffffff;
+        width: 35%;
+        height: 80%;
+        border-radius: 30px;
+        margin-left: 500px;
+        opacity: 0.9;
+        margin-top: 4%;
+        
+      }
+
+    body{
+	margin: 0;
+	overflow: scroll;
+	text-align: center;
+    background: url(11.jpg); 
+	background-size: cover;
+    background-position: center;
+	background-repeat: no-repeat;
+	}
+
+  .home {
+    background-color: #044d07;
+    color: white;
+    padding: 25.5px;
+    font-size: 16px;
+    border: white;
+    border-width: medium;
+    left:1100px;
+    top: 0px;
+    position: absolute;
+  }
+  
+  .about {
+    background-color:#044d07;
+    color: white;
+    padding: 25.5px;
+    font-size: 16px;
+    border: white;
+    border-width: medium;
+    left:960px;
+    top: 0px;
+    position: absolute;
+  }
+  .register {
+    background-color: #044d07;
+    color: white;
+    padding: 25.5px;
+    font-size: 16px;
+    border: white;
+    border-width: medium;
+    left:850px;
+    top: 0px;
+    position: absolute;
+  }
+  .show {
+    background-color: #044d07;
+    color: white;
+    padding: 25.5px;
+    font-size: 16px;
+    border: white;
+    border-width: medium;
+    left:1250px;
+    top: 0px;
+    position: absolute;
+  }
+  .home:hover {background-color: #3e8e41;}
+  .about:hover {background-color: #3e8e41;}
+  .register:hover {background-color: #3e8e41;}
+  .show:hover {background-color: #3e8e41;}
+  .submit:hover {background-color: #3e8e41;}
+    </style>
+
+
+
+
+
+
+   
+   
+<script>
+
+
+    function validateForm() 
+    {
+  var y = document.forms["contact_form"]["email"].value; 
+  var s=document.contact_form.email.value;  
+  var atposition=s.indexOf("@");  
+  var dotposition=s.lastIndexOf(".");  
+  if (y == "") {
+    alert("Email is Required");
+    return false;
+  }
+  else if(atposition<1 || dotposition<atposition+2 || dotposition+2>=s.length){
+  alert("Please enter a valid e-mail address ");  
+  return false;  
+  }  
+  var y = document.forms["contact_form"]["fname"].value;
+  if (y == "") {
+    alert("First Name is Required");
+    return false;
+  }
+  var y = document.forms["contact_form"]["lname"].value; 
+  if (y == "") {
+    alert("Last Name is Required");
+    return false;
+  }
+
+  var y = document.forms["contact_form"]["mobile"].value; 
+  if (y == "") {
+    alert(" Mobile Number is Required");
+    return false;
+  }
+  else if (y.length<10 || y.length>10 ){
+    alert("Mobile Number is invalid");
+    return false;
+  }
+ 
+  var y = document.forms["contact_form"]["address"].value; 
+  if (y == "") {
+    alert("Address is Required");
+    return false;
+  }
+}
+function numbersonly(e){
+    var unicode=e.charCode? e.charCode : e.keyCode
+    if (unicode!=8){ 
+        if (unicode<48||unicode>57) {
+            alert("Numeric values only")
+        }
+        else{
+          return true;
+        }
+            return false ;
+            }
+        }
+</script>  
+
+</html>

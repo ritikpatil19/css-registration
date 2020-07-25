@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="home.css">
+    </head>
+    <style>
+        .myslides{
+            display: none;
+        }
+    </style>
+    
+    <div class = "cont">
+        <ul>
+            <li><a href="register.html">Registration</a></li>
+            <li><a href="#about">AboutUs</a></li>
+            <li><a href="index.html"><button class="register">Home</button></a></li>
+            <li><a href="show.php"><button class="Show ">Show Registrations</button></a></li>
+
+            <li><a href = "#" class="active">Home</a></li>
+        </ul>
+    </div>
+    
+    <div class="home">
+        <h1 align = "center">SCET</h1>
+    </div>
+    <h2 align = "center" style="color: blue" >TECHNICO</h2>
+    <div class="image">
+        <img src="IMG_20180927_202809.jpg"  class = "myslides" height="500px" width="1350px">
+        <img src="IMG-20180928-WA0001.jpg"  class = "myslides" height="500px" width="1350px">
+        <img src="IMG-20180928-WA0003.jpg"  class = "myslides" height="500px" width="1350px">
+	<img src="IMG_20180927_214602.jpg"  class = "myslides" height="500px" width="1350px">
+    </div>
+    <script>
+            var myIndex = 0;
+            carousel();
+            function carousel() {
+            var i;
+            var x = document.getElementsByClassName("myslides");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 2000);
+            }
+        </script>
+    <div class="space"></div>
+        <div id = "about">
+            <h1 align = "center">About Us</h1>
+        </div>
+        <div class="text1">
+            <p>MITAOE ASSCET arranged the event TECHNICO 2020.Inaugration is held in the department by all faculty members.After the competion is held in 3 steps and on each step students are get disqualified.All the members of SCET did hard work for arranging this event some of the picture is shown below of decoration team.</p>
+        </div>
+        <div class= "cont1">
+	    <img src="IMG-20180926-WA0006.jpg"  class = "myslides" height="500px" width="1350px">
+	    <img src="IMG-20180928-WA0002.jpg"  class = "myslides" height="500px" width="1350px">
+        </div>   
+</html>
